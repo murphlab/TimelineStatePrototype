@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TimelineStatePanel : UIView
+@protocol TimelineStatePanelDelegate;
 
+@interface TimelineStatePanel : UIView
+@property (nonatomic, weak) id<TimelineStatePanelDelegate> delegate;
+@end
+
+@protocol TimelineStatePanelDelegate <NSObject>
+- (BOOL)childNightUseStartedForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel;
+- (BOOL)childHasUsedLullyAlreadyForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel;
+- (NSDate *)childUseLullyTimeTonightForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel;
+- (void)startBedtimeButtonTappedForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel;
+- (void)returnToTimelineButtonTappedForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel;
+- (void)cancelButtonTappedForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel;
 @end
