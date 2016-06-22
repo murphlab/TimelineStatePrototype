@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -61,9 +62,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNe-DP-fqE" customClass="TimelineStatePanel">
+                                <rect key="frame" x="0.0" y="472" width="600" height="128"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mNe-DP-fqE" secondAttribute="height" multiplier="75:16" id="enz-3L-SVB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mNe-DP-fqE" secondAttribute="bottom" id="1Ff-49-7gL"/>
                             <constraint firstItem="iZ0-KI-T24" firstAttribute="leading" secondItem="e3b-Kh-41j" secondAttribute="leading" id="6f9-0x-yM0"/>
                             <constraint firstItem="S5T-lw-snY" firstAttribute="centerX" secondItem="eDy-7N-cna" secondAttribute="centerX" id="7Fz-OA-nKq"/>
                             <constraint firstItem="n5R-jz-YkX" firstAttribute="top" secondItem="R1u-Bz-Bq9" secondAttribute="bottom" constant="8" symbolic="YES" id="7vF-cJ-heH"/>
@@ -76,6 +85,8 @@
                             <constraint firstItem="iZ0-KI-T24" firstAttribute="leading" secondItem="R1u-Bz-Bq9" secondAttribute="trailing" constant="8" symbolic="YES" id="bJp-rQ-Mff"/>
                             <constraint firstItem="R1u-Bz-Bq9" firstAttribute="centerY" secondItem="iZ0-KI-T24" secondAttribute="centerY" id="fkP-B6-Bx7"/>
                             <constraint firstItem="eDy-7N-cna" firstAttribute="centerX" secondItem="coX-vM-VwK" secondAttribute="centerX" id="hHg-pd-xFE"/>
+                            <constraint firstItem="mNe-DP-fqE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jD7-Zd-8cg"/>
+                            <constraint firstAttribute="trailing" secondItem="mNe-DP-fqE" secondAttribute="trailing" id="lhU-wC-Bpo"/>
                             <constraint firstItem="R1u-Bz-Bq9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mi2-QS-avn"/>
                             <constraint firstItem="eDy-7N-cna" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oXF-YV-nFt"/>
                             <constraint firstItem="n5R-jz-YkX" firstAttribute="centerY" secondItem="e3b-Kh-41j" secondAttribute="centerY" id="uoN-0p-6ij"/>
@@ -90,6 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="390" y="360"/>
         </scene>
     </scenes>
 </document>
