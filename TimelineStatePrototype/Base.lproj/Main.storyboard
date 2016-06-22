@@ -20,9 +20,15 @@
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R1u-Bz-Bq9">
                                 <rect key="frame" x="20" y="28" width="51" height="31"/>
+                                <connections>
+                                    <action selector="nightUseStartedSwitched:" destination="BYZ-38-t0r" eventType="valueChanged" id="ogB-wy-P4L"/>
+                                </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n5R-jz-YkX">
                                 <rect key="frame" x="20" y="67" width="51" height="31"/>
+                                <connections>
+                                    <action selector="hasUsedLullyAlreadySwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="lkZ-1V-4bZ"/>
+                                </connections>
                             </switch>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="eDy-7N-cna">
                                 <rect key="frame" x="0.0" y="135" width="600" height="216"/>
@@ -42,36 +48,45 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coX-vM-VwK">
+                                <rect key="frame" x="270" y="359" width="61" height="30"/>
+                                <state key="normal" title="Set Time"/>
+                                <connections>
+                                    <action selector="setTimeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iKK-uw-rY6"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Lully Time Tonight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5T-lw-snY">
-                                <rect key="frame" x="6" y="106" width="175" height="21"/>
+                                <rect key="frame" x="213" y="106" width="175" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coX-vM-VwK">
-                                <rect key="frame" x="270" y="359" width="61" height="30"/>
-                                <state key="normal" title="Set Time"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="n5R-jz-YkX" firstAttribute="centerY" secondItem="e3b-Kh-41j" secondAttribute="centerY" id="9ta-TD-Qcu"/>
-                            <constraint firstItem="iZ0-KI-T24" firstAttribute="leading" secondItem="e3b-Kh-41j" secondAttribute="leading" id="C9w-Rv-uxe"/>
-                            <constraint firstItem="R1u-Bz-Bq9" firstAttribute="centerY" secondItem="iZ0-KI-T24" secondAttribute="centerY" id="EOV-5o-wIi"/>
-                            <constraint firstItem="coX-vM-VwK" firstAttribute="centerX" secondItem="eDy-7N-cna" secondAttribute="centerX" id="JhU-i3-6nz"/>
-                            <constraint firstItem="R1u-Bz-Bq9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LJL-9t-RGX"/>
-                            <constraint firstItem="S5T-lw-snY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-14" id="ZUv-Nx-WxC"/>
-                            <constraint firstItem="eDy-7N-cna" firstAttribute="top" secondItem="S5T-lw-snY" secondAttribute="bottom" constant="8" symbolic="YES" id="az3-SU-0fg"/>
-                            <constraint firstItem="eDy-7N-cna" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ec9-Wh-hs3"/>
-                            <constraint firstItem="iZ0-KI-T24" firstAttribute="leading" secondItem="R1u-Bz-Bq9" secondAttribute="trailing" constant="8" symbolic="YES" id="edP-CB-wEY"/>
-                            <constraint firstItem="R1u-Bz-Bq9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="f4p-n3-g5m"/>
-                            <constraint firstItem="R1u-Bz-Bq9" firstAttribute="leading" secondItem="n5R-jz-YkX" secondAttribute="leading" id="fIf-LW-tfA"/>
-                            <constraint firstItem="n5R-jz-YkX" firstAttribute="top" secondItem="R1u-Bz-Bq9" secondAttribute="bottom" constant="8" symbolic="YES" id="iaI-fY-6rO"/>
-                            <constraint firstItem="coX-vM-VwK" firstAttribute="top" secondItem="eDy-7N-cna" secondAttribute="bottom" constant="8" symbolic="YES" id="jQo-dY-6kc"/>
-                            <constraint firstItem="S5T-lw-snY" firstAttribute="top" secondItem="n5R-jz-YkX" secondAttribute="bottom" constant="8" symbolic="YES" id="mf7-bl-maN"/>
-                            <constraint firstAttribute="trailing" secondItem="eDy-7N-cna" secondAttribute="trailing" id="rB1-Jo-Woh"/>
+                            <constraint firstItem="iZ0-KI-T24" firstAttribute="leading" secondItem="e3b-Kh-41j" secondAttribute="leading" id="6f9-0x-yM0"/>
+                            <constraint firstItem="S5T-lw-snY" firstAttribute="centerX" secondItem="eDy-7N-cna" secondAttribute="centerX" id="7Fz-OA-nKq"/>
+                            <constraint firstItem="n5R-jz-YkX" firstAttribute="top" secondItem="R1u-Bz-Bq9" secondAttribute="bottom" constant="8" symbolic="YES" id="7vF-cJ-heH"/>
+                            <constraint firstItem="R1u-Bz-Bq9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="BbK-Lq-5P8"/>
+                            <constraint firstAttribute="trailing" secondItem="eDy-7N-cna" secondAttribute="trailing" id="F1J-U5-kq5"/>
+                            <constraint firstItem="coX-vM-VwK" firstAttribute="top" secondItem="eDy-7N-cna" secondAttribute="bottom" constant="8" symbolic="YES" id="GAd-rT-bKX"/>
+                            <constraint firstItem="eDy-7N-cna" firstAttribute="top" secondItem="S5T-lw-snY" secondAttribute="bottom" constant="8" symbolic="YES" id="KZb-AT-RhA"/>
+                            <constraint firstItem="R1u-Bz-Bq9" firstAttribute="leading" secondItem="n5R-jz-YkX" secondAttribute="leading" id="Z7X-Wk-nnd"/>
+                            <constraint firstItem="S5T-lw-snY" firstAttribute="top" secondItem="e3b-Kh-41j" secondAttribute="bottom" constant="13" id="b70-re-xDe"/>
+                            <constraint firstItem="iZ0-KI-T24" firstAttribute="leading" secondItem="R1u-Bz-Bq9" secondAttribute="trailing" constant="8" symbolic="YES" id="bJp-rQ-Mff"/>
+                            <constraint firstItem="R1u-Bz-Bq9" firstAttribute="centerY" secondItem="iZ0-KI-T24" secondAttribute="centerY" id="fkP-B6-Bx7"/>
+                            <constraint firstItem="eDy-7N-cna" firstAttribute="centerX" secondItem="coX-vM-VwK" secondAttribute="centerX" id="hHg-pd-xFE"/>
+                            <constraint firstItem="R1u-Bz-Bq9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mi2-QS-avn"/>
+                            <constraint firstItem="eDy-7N-cna" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oXF-YV-nFt"/>
+                            <constraint firstItem="n5R-jz-YkX" firstAttribute="centerY" secondItem="e3b-Kh-41j" secondAttribute="centerY" id="uoN-0p-6ij"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hasUsedLullyAlreadySwitch" destination="n5R-jz-YkX" id="FwY-XV-3NT"/>
+                        <outlet property="nightUseStartedSwitch" destination="R1u-Bz-Bq9" id="kqp-zz-ayO"/>
+                        <outlet property="setTimeButton" destination="coX-vM-VwK" id="5dF-gb-eTZ"/>
+                        <outlet property="useLullyTimeTonightPicker" destination="eDy-7N-cna" id="dy0-8b-aUG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

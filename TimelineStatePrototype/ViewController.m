@@ -14,18 +14,25 @@
 @property (nonatomic) BOOL childHasUsedLullyAlready;
 @property (nonatomic, strong) NSDate *childUseLullyTimeTonight;
 
+@property (weak, nonatomic) IBOutlet UISwitch *nightUseStartedSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *hasUsedLullyAlreadySwitch;
+@property (weak, nonatomic) IBOutlet UIDatePicker *useLullyTimeTonightPicker;
+@property (weak, nonatomic) IBOutlet UIButton *setTimeButton;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)nightUseStartedSwitched:(id)sender {
 }
 
+- (IBAction)hasUsedLullyAlreadySwitch:(id)sender {
+}
+
+- (IBAction)setTimeButtonTapped:(id)sender {
+}
 @end
