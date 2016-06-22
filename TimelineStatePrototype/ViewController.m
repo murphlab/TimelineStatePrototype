@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *hasUsedLullyAlreadySwitch;
 @property (weak, nonatomic) IBOutlet UIDatePicker *useLullyTimeTonightPicker;
 @property (weak, nonatomic) IBOutlet UIButton *setTimeButton;
+@property (weak, nonatomic) IBOutlet TimelineStatePanel *timelineStatePanel;
 @end
 
 @implementation ViewController

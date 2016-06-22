@@ -96,6 +96,7 @@
                         <outlet property="hasUsedLullyAlreadySwitch" destination="n5R-jz-YkX" id="FwY-XV-3NT"/>
                         <outlet property="nightUseStartedSwitch" destination="R1u-Bz-Bq9" id="kqp-zz-ayO"/>
                         <outlet property="setTimeButton" destination="coX-vM-VwK" id="5dF-gb-eTZ"/>
+                        <outlet property="timelineStatePanel" destination="mNe-DP-fqE" id="o8Q-pR-X16"/>
                         <outlet property="useLullyTimeTonightPicker" destination="eDy-7N-cna" id="dy0-8b-aUG"/>
                     </connections>
                 </viewController>
