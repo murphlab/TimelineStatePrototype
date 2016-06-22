@@ -10,6 +10,10 @@
 
 @interface ViewController ()
 
+@property (nonatomic) BOOL childNightUseStarted;
+@property (nonatomic) BOOL childHasUsedLullyAlready;
+@property (nonatomic, strong) NSDate *childUseLullyTimeTonight;
+
 @end
 
 @implementation ViewController

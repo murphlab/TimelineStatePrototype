@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,7 +17,60 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R1u-Bz-Bq9">
+                                <rect key="frame" x="20" y="28" width="51" height="31"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n5R-jz-YkX">
+                                <rect key="frame" x="20" y="67" width="51" height="31"/>
+                            </switch>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="eDy-7N-cna">
+                                <rect key="frame" x="0.0" y="135" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="488324813.21617401">
+                                    <!--2016-06-22 21:46:53 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Night Use Started" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZ0-KI-T24">
+                                <rect key="frame" x="77" y="33" width="138" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has Used Lully Already" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3b-Kh-41j">
+                                <rect key="frame" x="77" y="72" width="177" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use Lully Time Tonight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5T-lw-snY">
+                                <rect key="frame" x="6" y="106" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="coX-vM-VwK">
+                                <rect key="frame" x="270" y="359" width="61" height="30"/>
+                                <state key="normal" title="Set Time"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n5R-jz-YkX" firstAttribute="centerY" secondItem="e3b-Kh-41j" secondAttribute="centerY" id="9ta-TD-Qcu"/>
+                            <constraint firstItem="iZ0-KI-T24" firstAttribute="leading" secondItem="e3b-Kh-41j" secondAttribute="leading" id="C9w-Rv-uxe"/>
+                            <constraint firstItem="R1u-Bz-Bq9" firstAttribute="centerY" secondItem="iZ0-KI-T24" secondAttribute="centerY" id="EOV-5o-wIi"/>
+                            <constraint firstItem="coX-vM-VwK" firstAttribute="centerX" secondItem="eDy-7N-cna" secondAttribute="centerX" id="JhU-i3-6nz"/>
+                            <constraint firstItem="R1u-Bz-Bq9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LJL-9t-RGX"/>
+                            <constraint firstItem="S5T-lw-snY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-14" id="ZUv-Nx-WxC"/>
+                            <constraint firstItem="eDy-7N-cna" firstAttribute="top" secondItem="S5T-lw-snY" secondAttribute="bottom" constant="8" symbolic="YES" id="az3-SU-0fg"/>
+                            <constraint firstItem="eDy-7N-cna" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ec9-Wh-hs3"/>
+                            <constraint firstItem="iZ0-KI-T24" firstAttribute="leading" secondItem="R1u-Bz-Bq9" secondAttribute="trailing" constant="8" symbolic="YES" id="edP-CB-wEY"/>
+                            <constraint firstItem="R1u-Bz-Bq9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="f4p-n3-g5m"/>
+                            <constraint firstItem="R1u-Bz-Bq9" firstAttribute="leading" secondItem="n5R-jz-YkX" secondAttribute="leading" id="fIf-LW-tfA"/>
+                            <constraint firstItem="n5R-jz-YkX" firstAttribute="top" secondItem="R1u-Bz-Bq9" secondAttribute="bottom" constant="8" symbolic="YES" id="iaI-fY-6rO"/>
+                            <constraint firstItem="coX-vM-VwK" firstAttribute="top" secondItem="eDy-7N-cna" secondAttribute="bottom" constant="8" symbolic="YES" id="jQo-dY-6kc"/>
+                            <constraint firstItem="S5T-lw-snY" firstAttribute="top" secondItem="n5R-jz-YkX" secondAttribute="bottom" constant="8" symbolic="YES" id="mf7-bl-maN"/>
+                            <constraint firstAttribute="trailing" secondItem="eDy-7N-cna" secondAttribute="trailing" id="rB1-Jo-Woh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
