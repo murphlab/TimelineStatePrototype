@@ -14,6 +14,8 @@
 @property (nonatomic, readonly) UIView *nightUseStartedView;
 
 @property (weak, nonatomic) IBOutlet UIView *nightUseStartedViewCancelContainerView;
+@property (weak, nonatomic) IBOutlet UIView *nightUseStartedViewCountdownContainerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *nightUseStartedViewCancelContainerCenterXConstraint;
 @end
 
 @implementation TimelineStatePanel

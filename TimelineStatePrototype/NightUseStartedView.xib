@@ -9,7 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimelineStatePanel">
             <connections>
+                <outlet property="nightUseStartedViewCancelContainerCenterXConstraint" destination="BCQ-cm-hb0" id="dQg-sU-H2e"/>
                 <outlet property="nightUseStartedViewCancelContainerView" destination="7Zf-AT-X3h" id="EWB-Wy-CUK"/>
+                <outlet property="nightUseStartedViewCountdownContainerView" destination="sd6-1o-54T" id="7FC-Gn-70J"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
