@@ -30,6 +30,13 @@
     }
 }
 
+#pragma mark Actions
+
+- (IBAction)startBedtimeButtonTapped:(UIButton *)sender {
+    NSLog(@"Start bedtime tapped");
+}
+
+
 #pragma mark - Getters and Setters
 
 #pragma mark Public
