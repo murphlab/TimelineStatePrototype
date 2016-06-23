@@ -11,10 +11,6 @@
 
 @interface ViewController () <TimelineStatePanelDelegate>
 
-@property (nonatomic) BOOL childNightUseStarted;
-@property (nonatomic) BOOL childHasUsedLullyAlready;
-@property (nonatomic, strong) NSDate *childUseLullyTimeTonight;
-
 @property (weak, nonatomic) IBOutlet UISwitch *nightUseStartedSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *hasUsedLullyAlreadySwitch;
 @property (weak, nonatomic) IBOutlet UIDatePicker *useLullyTimeTonightPicker;
@@ -32,29 +28,32 @@
 #pragma mark - Actions
 
 - (IBAction)nightUseStartedSwitched:(id)sender {
+    [self.timelineStatePanel setNeedsLayout];
 }
 
 - (IBAction)hasUsedLullyAlreadySwitch:(id)sender {
+    [self.timelineStatePanel setNeedsLayout];
 }
 
 - (IBAction)setTimeButtonTapped:(id)sender {
+    [self.timelineStatePanel setNeedsLayout];
 }
 
 #pragma mark - TimelineStatePanelDelegate
 
 - (BOOL)childNightUseStartedForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel
 {
-    return self.childNightUseStarted;
+    return self.nightUseStartedSwitch.on;
 }
 
 - (BOOL)childHasUsedLullyAlreadyForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel
 {
-    return self.childHasUsedLullyAlready;
+    return self.hasUsedLullyAlreadySwitch.on;
 }
 
 - (NSDate *)childUseLullyTimeTonightForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel
 {
-    return self.childUseLullyTimeTonight;
+    return self.useLullyTimeTonightPicker.date;
 }
 
 - (void)startBedtimeButtonTappedForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel
