@@ -7,10 +7,12 @@
 //
 
 #import "TimelineStatePanel.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface TimelineStatePanel ()
 @property (nonatomic, readonly) UIView *nightUseNotStartedView;
 @property (nonatomic, readonly) UIView *nightUseStartedView;
+
 @property (weak, nonatomic) IBOutlet UIView *nightUseStartedViewCancelContainerView;
 @end
 
@@ -66,6 +68,10 @@
         _nightUseStartedView = [[[NSBundle mainBundle] loadNibNamed:@"NightUseStartedView" owner:self options:nil] objectAtIndex:0];
         _nightUseStartedView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _nightUseStartedView.frame = self.bounds;
+        
+        self.nightUseStartedViewCancelContainerView.layer.cornerRadius = 8.0;
+        self.nightUseStartedViewCancelContainerView.layer.borderWidth = 1.0;
+        self.nightUseStartedViewCancelContainerView.layer.borderColor = [[UIColor whiteColor] CGColor];
         
     }
     return _nightUseStartedView;
