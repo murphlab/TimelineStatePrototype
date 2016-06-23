@@ -61,6 +61,8 @@
 - (void)startBedtimeButtonTappedForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel
 {
     NSLog(@"TAPPED: startBedtimeButton");
+    self.nightUseStartedSwitch.on = YES;
+    [self.timelineStatePanel setNeedsLayout];
 }
 
 - (void)returnToTimelineButtonTappedForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel
