@@ -47,21 +47,21 @@
 
 - (UIView *)nightUseNotStartedView
 {
-    if (!_nightUseStartedView) {
+    if (!_nightUseNotStartedView) {
         
-        _nightUseStartedView = [[[NSBundle mainBundle] loadNibNamed:@"NightUseNotStartedView" owner:self options:nil] objectAtIndex:0];
-        _nightUseStartedView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        _nightUseStartedView.frame = self.bounds;
+        _nightUseNotStartedView = [[[NSBundle mainBundle] loadNibNamed:@"NightUseNotStartedView" owner:self options:nil] objectAtIndex:0];
+        _nightUseNotStartedView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        _nightUseNotStartedView.frame = self.bounds;
         
     }
-    return _nightUseStartedView;
+    return _nightUseNotStartedView;
 }
 
 - (UIView *)nightUseStartedView
 {
     if (!_nightUseStartedView) {
         
-        _nightUseStartedView = [[[NSBundle mainBundle] loadNibNamed:@"NightUseNotStartedView" owner:self options:nil] objectAtIndex:0];
+        _nightUseStartedView = [[[NSBundle mainBundle] loadNibNamed:@"NightUseStartedView" owner:self options:nil] objectAtIndex:0];
         _nightUseStartedView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _nightUseStartedView.frame = self.bounds;
         
