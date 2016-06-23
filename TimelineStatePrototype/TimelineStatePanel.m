@@ -22,7 +22,8 @@
 {
     [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     if ([self.delegate childNightUseStartedForTimelineStatePanel:self]) {
-        
+
+        [self addSubview:self.nightUseStartedView];
         
     } else {
         
