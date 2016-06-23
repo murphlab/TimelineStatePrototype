@@ -33,7 +33,7 @@
 #pragma mark Actions
 
 - (IBAction)startBedtimeButtonTapped:(UIButton *)sender {
-    NSLog(@"Start bedtime tapped");
+    [self.delegate startBedtimeButtonTappedForTimelineStatePanel:self];
 }
 
 
