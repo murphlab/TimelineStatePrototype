@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.timelineStatePanel.delegate = self;
+    self.nightUseStartedSwitch.on = NO;
+    self.hasUsedLullyAlreadySwitch.on = NO;
 }
 
 #pragma mark - Actions
