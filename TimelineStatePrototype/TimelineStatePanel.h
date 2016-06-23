@@ -15,9 +15,13 @@
 @end
 
 @protocol TimelineStatePanelDelegate <NSObject>
+
+// Data:
 - (BOOL)childNightUseStartedForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel;
 - (BOOL)childHasUsedLullyAlreadyForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel;
 - (NSDate *)childUseLullyTimeTonightForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel;
+
+// Actions:
 - (void)startBedtimeButtonTappedForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel;
 - (void)returnToTimelineButtonTappedForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel;
 - (void)cancelButtonTappedForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel;
