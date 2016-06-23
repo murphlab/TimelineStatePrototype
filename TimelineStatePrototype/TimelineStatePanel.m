@@ -11,6 +11,7 @@
 @interface TimelineStatePanel ()
 @property (nonatomic, readonly) UIView *nightUseNotStartedView;
 @property (nonatomic, readonly) UIView *nightUseStartedView;
+@property (weak, nonatomic) IBOutlet UIView *nightUseStartedViewCancelContainerView;
 @end
 
 @implementation TimelineStatePanel
