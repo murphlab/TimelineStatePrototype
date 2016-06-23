@@ -64,7 +64,7 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNe-DP-fqE" customClass="TimelineStatePanel">
                                 <rect key="frame" x="0.0" y="394" width="600" height="206"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mNe-DP-fqE" secondAttribute="height" multiplier="125:43" id="enz-3L-SVB"/>
                                 </constraints>
