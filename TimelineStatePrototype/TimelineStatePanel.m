@@ -39,17 +39,11 @@
 - (UIView *)nightUseStartedView
 {
     if (!_nightUseStartedView) {
-        _nightUseStartedView = [[UIView alloc] initWithFrame:self.bounds];
+        
+        _nightUseStartedView = [[[NSBundle mainBundle] loadNibNamed:@"NightUseStartedView" owner:self options:nil] objectAtIndex:0];
         _nightUseStartedView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        // Has kid been tucked in? start bedtime (button covers entire view)
-        
-        NSString *kidName = @"XXXX";
-        
-        NSString *questionLabelString = [NSString stringWithFormat:@"Has %@ been tucked into bed?", kidName];
-        UILabel *questionLabel = [[UILabel alloc] init];
-        questionLabel.text = questionLabelString;
-        [questionLabel sizeToFit];
-        [_nightUseStartedView addSubview:questionLabel];
+        _nightUseStartedView.frame = self.bounds;
+
     }
     return _nightUseStartedView;
 }
