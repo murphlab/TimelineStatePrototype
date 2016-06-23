@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -63,10 +62,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mNe-DP-fqE" customClass="TimelineStatePanel">
-                                <rect key="frame" x="0.0" y="394" width="600" height="206"/>
+                                <rect key="frame" x="0.0" y="470" width="600" height="130"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="mNe-DP-fqE" secondAttribute="height" multiplier="125:43" id="enz-3L-SVB"/>
+                                    <constraint firstAttribute="height" constant="130" id="gJK-az-R1x"/>
                                 </constraints>
                             </view>
                         </subviews>

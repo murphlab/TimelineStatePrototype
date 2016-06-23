@@ -28,7 +28,13 @@
                         <constraint firstItem="jiK-9J-AsK" firstAttribute="centerX" secondItem="Z1v-C3-meU" secondAttribute="centerX" id="m7K-0F-1Pb"/>
                         <constraint firstAttribute="width" secondItem="Z1v-C3-meU" secondAttribute="height" multiplier="125:17" id="nE4-CA-5Pg"/>
                         <constraint firstAttribute="bottom" secondItem="jiK-9J-AsK" secondAttribute="bottom" constant="6" id="s6w-Qy-xrc"/>
+                        <constraint firstAttribute="height" constant="51" id="vcB-qF-FTx"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="nE4-CA-5Pg"/>
+                        </mask>
+                    </variation>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Zf-AT-X3h" userLabel="Cancel Container">
                     <rect key="frame" x="210" y="8" width="142" height="63"/>
