@@ -14,7 +14,7 @@
 		BE9A57A31D1B3C1F00F37B48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9A57A21D1B3C1F00F37B48 /* Assets.xcassets */; };
 		BE9A57A61D1B3C1F00F37B48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE9A57A41D1B3C1F00F37B48 /* LaunchScreen.storyboard */; };
 		BEE1A2351D1B3CDA0076619B /* TimelineStatePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = BEE1A2341D1B3CDA0076619B /* TimelineStatePanel.m */; };
-		BEE1A2371D1C88120076619B /* NightUseStartedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEE1A2361D1C88120076619B /* NightUseStartedView.xib */; };
+		BEE1A2371D1C88120076619B /* NightUseNotStartedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEE1A2361D1C88120076619B /* NightUseNotStartedView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 		BE9A57A71D1B3C1F00F37B48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEE1A2331D1B3CDA0076619B /* TimelineStatePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimelineStatePanel.h; sourceTree = "<group>"; };
 		BEE1A2341D1B3CDA0076619B /* TimelineStatePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimelineStatePanel.m; sourceTree = "<group>"; };
-		BEE1A2361D1C88120076619B /* NightUseStartedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NightUseStartedView.xib; sourceTree = "<group>"; };
+		BEE1A2361D1C88120076619B /* NightUseNotStartedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NightUseNotStartedView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 				BE9A579C1D1B3C1F00F37B48 /* ViewController.h */,
 				BE9A579D1D1B3C1F00F37B48 /* ViewController.m */,
 				BE9A579F1D1B3C1F00F37B48 /* Main.storyboard */,
-				BEE1A2361D1C88120076619B /* NightUseStartedView.xib */,
+				BEE1A2361D1C88120076619B /* NightUseNotStartedView.xib */,
 				BE9A57A21D1B3C1F00F37B48 /* Assets.xcassets */,
 				BE9A57A41D1B3C1F00F37B48 /* LaunchScreen.storyboard */,
 				BE9A57A71D1B3C1F00F37B48 /* Info.plist */,
@@ -145,7 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE9A57A61D1B3C1F00F37B48 /* LaunchScreen.storyboard in Resources */,
-				BEE1A2371D1C88120076619B /* NightUseStartedView.xib in Resources */,
+				BEE1A2371D1C88120076619B /* NightUseNotStartedView.xib in Resources */,
 				BE9A57A31D1B3C1F00F37B48 /* Assets.xcassets in Resources */,
 				BE9A57A11D1B3C1F00F37B48 /* Main.storyboard in Resources */,
 			);

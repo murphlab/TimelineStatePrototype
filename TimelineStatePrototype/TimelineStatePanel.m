@@ -21,10 +21,10 @@
     [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     if ([self.delegate childNightUseStartedForTimelineStatePanel:self]) {
         
-        [self addSubview:self.nightUseStartedView];
         
     } else {
         
+        [self addSubview:self.nightUseStartedView];
         
         
     }
@@ -40,7 +40,7 @@
 {
     if (!_nightUseStartedView) {
         
-        _nightUseStartedView = [[[NSBundle mainBundle] loadNibNamed:@"NightUseStartedView" owner:self options:nil] objectAtIndex:0];
+        _nightUseStartedView = [[[NSBundle mainBundle] loadNibNamed:@"NightUseNotStartedView" owner:self options:nil] objectAtIndex:0];
         _nightUseStartedView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _nightUseStartedView.frame = self.bounds;
 
