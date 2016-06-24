@@ -15,7 +15,11 @@
 
 @property (weak, nonatomic) IBOutlet UIView *nightUseStartedViewCancelContainerView;
 @property (weak, nonatomic) IBOutlet UIView *nightUseStartedViewCountdownContainerView;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *nightUseStartedViewCancelContainerCenterXConstraint;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *countdownContainerCenterXConstraint;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *cancelContainerCenterXConstraint;
+
 @end
 
 @implementation TimelineStatePanel
@@ -30,11 +34,22 @@
 
         [self addSubview:self.nightUseStartedView];
         
+        if ([self.delegate childHasUsedLullyAlreadyForTimelineStatePanel:self]) {
+            
+            self.nightUseStartedViewCountdownContainerView.hidden = YES;
+            self.cancelContainerCenterXConstraint.constant = 0;
+            
+        } else {
+            
+            self.nightUseStartedViewCountdownContainerView.hidden = NO;
+            CGFloat containerXOffset = self.nightUseStartedView.bounds.size.width * 0.25;
+            self.cancelContainerCenterXConstraint.constant = containerXOffset;
+            self.countdownContainerCenterXConstraint.constant = -containerXOffset;
+        }
+        
     } else {
         
         [self addSubview:self.nightUseNotStartedView];
-        
-        
     }
 }
 
@@ -74,7 +89,6 @@
         self.nightUseStartedViewCancelContainerView.layer.cornerRadius = 8.0;
         self.nightUseStartedViewCancelContainerView.layer.borderWidth = 1.0;
         self.nightUseStartedViewCancelContainerView.layer.borderColor = [[UIColor whiteColor] CGColor];
-        
     }
     return _nightUseStartedView;
 }
