@@ -20,6 +20,7 @@
 - (BOOL)childNightUseStartedForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel;
 - (BOOL)childHasUsedLullyAlreadyForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel;
 - (NSDate *)childUseLullyTimeTonightForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel;
+- (NSString *)childNameForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel;
 
 // Actions:
 - (void)startBedtimeButtonTappedForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel;

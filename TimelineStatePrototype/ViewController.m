@@ -43,6 +43,11 @@
 
 #pragma mark - TimelineStatePanelDelegate
 
+- (NSString *)childNameForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel
+{
+    return @"Bartholomew"; // Test with long-ish name for formatting purposes
+}
+
 - (BOOL)childNightUseStartedForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel
 {
     return self.nightUseStartedSwitch.on;

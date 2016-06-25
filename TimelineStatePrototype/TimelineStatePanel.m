@@ -20,6 +20,8 @@
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *cancelContainerCenterXConstraint;
 
+@property (weak, nonatomic) IBOutlet UILabel *childTuckedQuestionLabel;
+
 @end
 
 @implementation TimelineStatePanel
@@ -45,11 +47,16 @@
             CGFloat containerXOffset = self.nightUseStartedView.bounds.size.width * 0.25;
             self.cancelContainerCenterXConstraint.constant = containerXOffset;
             self.countdownContainerCenterXConstraint.constant = -containerXOffset;
+
         }
         
     } else {
         
         [self addSubview:self.nightUseNotStartedView];
+        
+        NSString *childName = [self.delegate childNameForTimelineStatePanel:self];
+        NSString *childTuckedText = [NSString stringWithFormat:@"Has %@ been tucked into bed?", childName];
+        self.childTuckedQuestionLabel.text = childTuckedText;
     }
 }
 
