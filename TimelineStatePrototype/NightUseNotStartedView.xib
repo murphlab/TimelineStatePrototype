@@ -15,16 +15,16 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Has your child been tucked into bed?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zq8-R1-vvB">
                     <rect key="frame" x="59" y="32" width="256" height="21"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="start bedtime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXb-BO-ln9">
                     <rect key="frame" x="81" y="62" width="213" height="48"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="35"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vj-Dk-7V0" userLabel="Start Bedtime Button">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Vj-Dk-7V0" userLabel="Start Bedtime Button">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
@@ -34,14 +34,10 @@
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Zq8-R1-vvB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.66" id="2Ta-4e-0iq"/>
-                <constraint firstAttribute="trailing" secondItem="6Vj-Dk-7V0" secondAttribute="trailing" id="Md9-sw-jHL"/>
-                <constraint firstAttribute="bottom" secondItem="6Vj-Dk-7V0" secondAttribute="bottom" id="Oim-8G-Z6t"/>
-                <constraint firstItem="6Vj-Dk-7V0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="VT0-Jn-deQ"/>
-                <constraint firstItem="qXb-BO-ln9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZFY-TV-GaA"/>
-                <constraint firstItem="qXb-BO-ln9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.33" id="fXx-6S-VZq"/>
-                <constraint firstItem="6Vj-Dk-7V0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="t3v-Qy-G5m"/>
-                <constraint firstItem="Zq8-R1-vvB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xSi-Uv-jzU"/>
+                <constraint firstItem="Zq8-R1-vvB" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="0.66" id="1fg-52-L8p"/>
+                <constraint firstItem="Zq8-R1-vvB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5wa-hg-Pdd"/>
+                <constraint firstItem="qXb-BO-ln9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.33" id="9QX-Cb-aSl"/>
+                <constraint firstItem="qXb-BO-ln9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="iuD-KB-dQP"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
