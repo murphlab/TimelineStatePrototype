@@ -29,9 +29,19 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cE-k9-hOJ" userLabel="return button">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <connections>
+                                <action selector="returnToTimelineButtonTapped:" destination="-1" eventType="touchUpInside" id="p3m-A8-aCV"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="8cE-k9-hOJ" firstAttribute="top" secondItem="Z1v-C3-meU" secondAttribute="top" id="144-IS-QuM"/>
+                        <constraint firstItem="8cE-k9-hOJ" firstAttribute="leading" secondItem="Z1v-C3-meU" secondAttribute="leading" id="5WI-qv-NRU"/>
+                        <constraint firstAttribute="trailing" secondItem="8cE-k9-hOJ" secondAttribute="trailing" id="5Z7-P0-pfu"/>
+                        <constraint firstAttribute="bottom" secondItem="8cE-k9-hOJ" secondAttribute="bottom" id="YL6-IH-QUP"/>
                         <constraint firstAttribute="width" secondItem="Z1v-C3-meU" secondAttribute="height" multiplier="754:100" id="gZ2-We-4PB"/>
                         <constraint firstAttribute="bottom" secondItem="jiK-9J-AsK" secondAttribute="bottom" constant="2" id="hbx-Po-JxH"/>
                         <constraint firstAttribute="width" secondItem="Z1v-C3-meU" secondAttribute="height" multiplier="125:17" id="nE4-CA-5Pg"/>
@@ -58,6 +68,12 @@
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGs-hM-cTM" userLabel="cancel button">
+                            <rect key="frame" x="0.0" y="0.0" width="142" height="47"/>
+                            <connections>
+                                <action selector="cancelButtonTappepd:" destination="-1" eventType="touchUpInside" id="JNQ-ZW-3cX"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -65,7 +81,11 @@
                         <constraint firstItem="LIX-au-QCf" firstAttribute="centerY" secondItem="7Zf-AT-X3h" secondAttribute="centerY" multiplier="1.4" id="4T1-Gr-QMm"/>
                         <constraint firstItem="o8c-QQ-mVQ" firstAttribute="top" secondItem="7Zf-AT-X3h" secondAttribute="top" constant="11" id="In9-AI-Jyb"/>
                         <constraint firstItem="o8c-QQ-mVQ" firstAttribute="centerY" secondItem="7Zf-AT-X3h" secondAttribute="centerY" multiplier="0.6" id="KlP-fP-EMT"/>
+                        <constraint firstAttribute="trailing" secondItem="DGs-hM-cTM" secondAttribute="trailing" id="LPj-ss-t7U"/>
+                        <constraint firstAttribute="bottom" secondItem="DGs-hM-cTM" secondAttribute="bottom" id="SVg-lL-zj3"/>
                         <constraint firstAttribute="bottom" secondItem="LIX-au-QCf" secondAttribute="bottom" constant="-5" id="Svh-pH-H6t"/>
+                        <constraint firstItem="DGs-hM-cTM" firstAttribute="top" secondItem="7Zf-AT-X3h" secondAttribute="top" id="ZMQ-Y0-7IB"/>
+                        <constraint firstItem="DGs-hM-cTM" firstAttribute="leading" secondItem="7Zf-AT-X3h" secondAttribute="leading" id="hWY-vZ-WjE"/>
                         <constraint firstAttribute="width" constant="142" id="jx7-vL-qcc"/>
                         <constraint firstItem="LIX-au-QCf" firstAttribute="centerX" secondItem="7Zf-AT-X3h" secondAttribute="centerX" id="psY-at-Oza"/>
                         <constraint firstItem="o8c-QQ-mVQ" firstAttribute="centerX" secondItem="7Zf-AT-X3h" secondAttribute="centerX" id="ryq-Fe-QjF"/>

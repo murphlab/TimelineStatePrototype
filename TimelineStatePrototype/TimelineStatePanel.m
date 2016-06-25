@@ -66,6 +66,13 @@
     [self.delegate startBedtimeButtonTappedForTimelineStatePanel:self];
 }
 
+- (IBAction)cancelButtonTappepd:(UIButton *)sender {
+    [self.delegate cancelButtonTappedForTimelineStatePanel:self];
+}
+
+- (IBAction)returnToTimelineButtonTapped:(UIButton *)sender {
+    [self.delegate returnToTimelineButtonTappedForTimelineStatePanel:self];
+}
 
 #pragma mark - Getters and Setters
 
