@@ -135,6 +135,7 @@
 
 - (void)updateCountdown
 {
+    NSLog(@"updateCountdown");
     if (self.nightUseStartedView.superview && !self.nightUseStartedViewCountdownContainerView.hidden) {
         NSDate *useLullyTime = [self.delegate childUseLullyTimeTonightForTimelineStatePanel:self];
         NSInteger countdownMinutes = useLullyTime.timeIntervalSinceNow / 60;

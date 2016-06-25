@@ -41,6 +41,10 @@
     [self.timelineStatePanel setNeedsLayout];
 }
 
+- (IBAction)removePanelTapped:(id)sender {
+    [self.timelineStatePanel removeFromSuperview];
+}
+
 #pragma mark - TimelineStatePanelDelegate
 
 - (NSString *)childNameForTimelineStatePanel:(TimelineStatePanel *)timelineStatePanel

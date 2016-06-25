@@ -69,6 +69,13 @@
                                     <constraint firstAttribute="width" secondItem="mNe-DP-fqE" secondAttribute="height" multiplier="750:226" id="ixd-us-wTZ"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejW-P5-FDw">
+                                <rect key="frame" x="468" y="20" width="112" height="30"/>
+                                <state key="normal" title="REMOVE PANEL"/>
+                                <connections>
+                                    <action selector="removePanelTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yRV-1H-91u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -80,6 +87,8 @@
                             <constraint firstAttribute="trailing" secondItem="eDy-7N-cna" secondAttribute="trailing" id="F1J-U5-kq5"/>
                             <constraint firstItem="coX-vM-VwK" firstAttribute="top" secondItem="eDy-7N-cna" secondAttribute="bottom" constant="8" symbolic="YES" id="GAd-rT-bKX"/>
                             <constraint firstItem="eDy-7N-cna" firstAttribute="top" secondItem="S5T-lw-snY" secondAttribute="bottom" constant="8" symbolic="YES" id="KZb-AT-RhA"/>
+                            <constraint firstItem="ejW-P5-FDw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Mxa-w9-ieV"/>
+                            <constraint firstItem="ejW-P5-FDw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Vuc-Pc-naB"/>
                             <constraint firstItem="R1u-Bz-Bq9" firstAttribute="leading" secondItem="n5R-jz-YkX" secondAttribute="leading" id="Z7X-Wk-nnd"/>
                             <constraint firstItem="S5T-lw-snY" firstAttribute="top" secondItem="e3b-Kh-41j" secondAttribute="bottom" constant="13" id="b70-re-xDe"/>
                             <constraint firstItem="iZ0-KI-T24" firstAttribute="leading" secondItem="R1u-Bz-Bq9" secondAttribute="trailing" constant="8" symbolic="YES" id="bJp-rQ-Mff"/>
