@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="cancelContainerCenterXConstraint" destination="3uW-b8-9jC" id="Gng-tQ-Ajr"/>
                 <outlet property="countdownContainerCenterXConstraint" destination="ZZ2-ax-4xl" id="tCM-Yv-0Zv"/>
+                <outlet property="countdownLabel" destination="bmr-xu-ClZ" id="hVE-d7-cim"/>
                 <outlet property="nightUseStartedViewCancelContainerView" destination="7Zf-AT-X3h" id="EWB-Wy-CUK"/>
                 <outlet property="nightUseStartedViewCountdownContainerView" destination="sd6-1o-54T" id="7FC-Gn-70J"/>
             </connections>

@@ -21,6 +21,9 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *cancelContainerCenterXConstraint;
 
 @property (weak, nonatomic) IBOutlet UILabel *childTuckedQuestionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *countdownLabel;
+
+@property (weak, nonatomic) NSTimer *countdownTimer;
 
 @end
 
@@ -47,7 +50,8 @@
             CGFloat containerXOffset = self.nightUseStartedView.bounds.size.width * 0.25;
             self.cancelContainerCenterXConstraint.constant = containerXOffset;
             self.countdownContainerCenterXConstraint.constant = -containerXOffset;
-
+            [self updateCountdown];
+            [self startCountdownTimer];
         }
         
     } else {
@@ -58,6 +62,12 @@
         NSString *childTuckedText = [NSString stringWithFormat:@"Has %@ been tucked into bed?", childName];
         self.childTuckedQuestionLabel.text = childTuckedText;
     }
+}
+
+- (void)removeFromSuperview
+{
+    [super removeFromSuperview];
+    [self stopCountdownTimer];
 }
 
 #pragma mark Actions
@@ -105,6 +115,33 @@
         self.nightUseStartedViewCancelContainerView.layer.borderColor = [[UIColor whiteColor] CGColor];
     }
     return _nightUseStartedView;
+}
+
+- (void)startCountdownTimer
+{
+    if (self.countdownTimer.valid) return;
+    self.countdownTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                           target:self
+                                                         selector:@selector(updateCountdown)
+                                                         userInfo:nil
+                                                          repeats:YES];
+}
+
+- (void)stopCountdownTimer
+{
+    if (!self.countdownTimer.valid) return;
+    [self.countdownTimer invalidate];
+}
+
+- (void)updateCountdown
+{
+    if (self.nightUseStartedView.superview && !self.nightUseStartedViewCountdownContainerView.hidden) {
+        NSDate *useLullyTime = [self.delegate childUseLullyTimeTonightForTimelineStatePanel:self];
+        NSInteger countdownMinutes = useLullyTime.timeIntervalSinceNow / 60;
+        countdownMinutes = MAX(countdownMinutes, 0);
+        NSString *countdownText = [NSString stringWithFormat:@"%ld minutes left", countdownMinutes];
+        self.countdownLabel.text = countdownText;
+    }
 }
 
 @end
